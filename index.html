@@ -28,13 +28,15 @@
 
     <section>
       <h3>Create an Affirmation:</h3>
-      <form>
+      <form onsubmit="handleSubmit(event)">
         <input
           placeholder="Affirmation"
-          type="text">
+          type="text"
+          id="affirmationText">
         <input
           placeholder="Author"
-          type="text">
+          type="text"
+          id="authorText">
         <button class="submit-button">Submit</button>
       </form>
     </section>
@@ -46,21 +48,22 @@
           <tr>
             <th>Affirmation Text</th>
             <th>Affirmation Author</th>
+            <th>Delete</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody id="tableBody">
+          <!-- <tr>
             <td>You probably got this!</td>
             <td>Oscar</td>
           </tr>
           <tr>
             <td>You definitely got this!</td>
-            <td>Elmo</td>
+            <td>Elmo</td>k
           </tr>
           <tr>
             <td>Don't forget to delete these three hardcoded table rows!</td>
             <td>Abby Cadabby</td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </section>
