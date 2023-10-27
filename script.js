@@ -1,5 +1,7 @@
 onReady();
 
+let fire = 0;
+let ice = 0;
 
 
 function fireEmoji() {
@@ -8,6 +10,9 @@ function fireEmoji() {
   let emojis = document.getElementById('emojis');
 
   emojis.innerHTML += `<p>🔥</p>`
+
+  fire ++;
+  console.log(fire);
 }
 
 function iceEmoji() {
@@ -17,11 +22,15 @@ function iceEmoji() {
 
   emojis.innerHTML += `<p>❄️</p>`
 
+  ice ++;
+  console.log(ice);
+
 }
 function handleSubmit(event) {
   console.log(event);
 
   event.preventDefault();
+  if ( fire > ice ) {
   let affirmation = document.getElementById('affirmationText');
   let author = document.getElementById('authorText');
 
@@ -36,11 +45,15 @@ function handleSubmit(event) {
    </tr>`
    affirmation.value = ""
    author.value = ""
-  
+  }
 }
 
 function deleteText(event) {
+  if ( ice > fire ) {
   event.target.parentElement.parentElement.remove();
+
+  
+  }
   
 }
 
